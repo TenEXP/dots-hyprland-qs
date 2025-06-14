@@ -154,7 +154,7 @@ Singleton {
         property int large: 23
         property int verylarge: 30
         property int full: 9999
-        property int screenRounding: large
+        property int screenRounding: unsharpen
         property int windowRounding: 18
     }
 
@@ -168,15 +168,15 @@ Singleton {
             property string reading: "Readex Pro"
         }
         property QtObject pixelSize: QtObject {
-            property int smallest: 10
-            property int smaller: 13
-            property int small: 15
-            property int normal: 16
-            property int large: 17
-            property int larger: 19
-            property int huge: 22
-            property int hugeass: 23
-            property int title: 28
+            property int smallest: 8
+            property int smaller: 11
+            property int small: 13
+            property int normal: 14
+            property int large: 15
+            property int larger: 17
+            property int huge: 20
+            property int hugeass: 21
+            property int title: 26
         }
     }
 
