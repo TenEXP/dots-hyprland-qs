@@ -23,18 +23,18 @@ Singleton {
 
     property QtObject apps: QtObject {
         property string bluetooth: "kcmshell6 kcm_bluetooth"
-        property string imageViewer: "loupe"
+        property string imageViewer: "gwenview"
         property string network: "plasmawindowed org.kde.plasma.networkmanagement"
         property string networkEthernet: "kcmshell6 kcm_networkmanagement"
         property string settings: "systemsettings"
-        property string taskManager: "plasma-systemmonitor --page-name Processes"
-        property string terminal: "kitty -1" // This is only for shell actions
+        property string taskManager: "btop"
+        property string terminal: "footclient" // This is only for shell actions
     }
 
     property QtObject battery: QtObject {
-        property int low: 20
-        property int critical: 5
-        property int suspend: 2
+        property int low: 40
+        property int critical: 20
+        property int suspend: 5
     }
 
     property QtObject bar: QtObject {
@@ -44,15 +44,15 @@ Singleton {
         property bool showBackground: true
         property bool verbose: true
         property QtObject resources: QtObject {
-            property bool alwaysShowSwap: true
+            property bool alwaysShowSwap: false
             property bool alwaysShowCpu: false
         }
         property list<string> screenList: [] // List of names, like "eDP-1", find out with 'hyprctl monitors' command
         property QtObject utilButtons: QtObject {
-            property bool showScreenSnip: true
+            property bool showScreenSnip: false
             property bool showColorPicker: false
             property bool showMicToggle: false
-            property bool showKeyboardToggle: true
+            property bool showKeyboardToggle: false
         }
         property QtObject workspaces: QtObject {
             property int shown: 10
@@ -69,7 +69,7 @@ Singleton {
         property bool hoverToReveal: false // When false, only reveals on empty workspace
         property list<string> pinnedApps: [ // IDs of pinned entries
             "org.kde.dolphin",
-            "kitty",
+            "footclient",
         ]
     }
 
@@ -107,7 +107,7 @@ Singleton {
 
     property QtObject search: QtObject {
         property int nonAppResultDelay: 30 // This prevents lagging when typing
-        property string engineBaseUrl: "https://www.google.com/search?q="
+        property string engineBaseUrl: "https://www.duckduckgo.com/search?q="
         property list<string> excludedSites: [ "quora.com" ]
         property bool sloppy: false // Uses levenshtein distance based scoring instead of fuzzy sort. Very weird.
         property QtObject prefix: QtObject {
@@ -134,7 +134,7 @@ Singleton {
     property QtObject time: QtObject {
         // https://doc.qt.io/qt-6/qtime.html#toString
         property string format: "hh:mm"
-        property string dateFormat: "dddd, dd/MM"
+        property string dateFormat: "ddd, dd/MM"
     }
 
     property QtObject hacks: QtObject {
