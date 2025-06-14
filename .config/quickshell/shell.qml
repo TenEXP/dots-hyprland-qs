@@ -27,19 +27,19 @@ ShellRoot {
     // Enable/disable modules here. False = not loaded at all, so rest assured
     // no unnecessary stuff will take up memory if you decide to only use, say, the overview.
     property bool enableBar: true
-    property bool enableBackgroundWidgets: true
-    property bool enableCheatsheet: true
+    property bool enableBackgroundWidgets: false
+    property bool enableCheatsheet: false
     property bool enableDock: false
     property bool enableMediaControls: true
     property bool enableNotificationPopup: true
     property bool enableOnScreenDisplayBrightness: true
     property bool enableOnScreenDisplayVolume: true
-    property bool enableOnScreenKeyboard: true
+    property bool enableOnScreenKeyboard: false
     property bool enableOverview: true
     property bool enableReloadPopup: true
-    property bool enableScreenCorners: true
+    property bool enableScreenCorners: false
     property bool enableSession: true
-    property bool enableSidebarLeft: true
+    property bool enableSidebarLeft: false
     property bool enableSidebarRight: true
 
     // Force initialization of some singletons
@@ -67,4 +67,3 @@ ShellRoot {
     LazyLoader { active: enableSidebarLeft; component: SidebarLeft {} }
     LazyLoader { active: enableSidebarRight; component: SidebarRight {} }
 }
-
